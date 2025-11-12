@@ -1,0 +1,20 @@
+<group name="local,syslog,sshd,">
+  <!-- SSH brute force / failed login detection -->
+  <rule id="100001" level="7">
+    <decoded_as>syslog</decoded_as>
+    <field name="program">sshd</field>
+    <match>Failed password</match>
+    <description>SSH failed login attempt detected</description>
+    <options>no_full_log</options>
+    <group>authentication_failed,ssh</group>
+  </rule>
+
+  <!-- Privilege escalation: sudo succeeded -->
+  <rule id="100010" level="10">
+    <decoded_as>syslog</decoded_as>
+    <field name="program">sudo</field>
+    <match>COMMAND=/usr/bin/</match>
+    <description>Successful sudo command executed (possible privilege escalation)</description>
+    <group>privilege_escalation,sudo</group>
+  </rule>
+</group>
