@@ -1,0 +1,12 @@
+$ curl -s http://192.168.206.133:9200 | jq .
+{
+  "name": "ubuntu",
+  "cluster_name": "elasticsearch",
+  "version": {
+    "number": "7.17.13",
+    "build_flavor": "default",
+    ...
+  },
+  "tagline": "You Know, for Search"
+}
+checked_at: 2025-09-24T11:46:33Z
