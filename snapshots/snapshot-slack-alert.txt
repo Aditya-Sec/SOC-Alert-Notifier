@@ -1,0 +1,9 @@
+Slack message (example):
+Title: WAZUH Alert
+Message: Successful sudo to ROOT executed.
+Details:
+Date: Sep 25 13:08:25
+Host: ubuntu
+Agent: (000) - ubuntu
+Location: /var/log/auth.log
+Rule ID: 5402 (Level 3)
