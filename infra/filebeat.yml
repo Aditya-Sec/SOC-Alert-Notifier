@@ -1,0 +1,18 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/auth.log
+    - /var/log/syslog
+  json.keys_under_root: false
+
+processors:
+  - add_host_metadata: ~
+  - add_cloud_metadata: ~
+
+output.elasticsearch:
+  hosts: ["http://${ES_HOST}:${ES_PORT}"]
+  # If you use credentials, load them from .env and configure here.
+
+setup.kibana:
+  host: "http://${ES_HOST}:5601"
