@@ -1,0 +1,7 @@
+Index: filebeat-*
+Hits: 40,691
+Sample document:
+@timestamp: Sep 24, 2025 @ 11:46:33.495
+agent.name: ubuntu
+agent.type: filebeat
+message: /var/log/auth.log entries...
