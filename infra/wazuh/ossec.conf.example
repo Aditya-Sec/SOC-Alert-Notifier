@@ -1,0 +1,16 @@
+<ossec_config>
+  <global>
+    <email_notification>no</email_notification>
+    <smtp_server>smtp.example.com</smtp_server>
+    <email_from>wazuh@example.local</email_from>
+    <email_to>you@example.com</email_to>
+  </global>
+
+  <!-- Slack integration example: DO NOT commit real webhook; use .env -->
+  <integration>
+    <name>slack</name>
+    <hook_url>REDACTED_SLACK_WEBHOOK_URL</hook_url>
+    <alert_format>json</alert_format>
+    <level>2</level>
+  </integration>
+</ossec_config>
