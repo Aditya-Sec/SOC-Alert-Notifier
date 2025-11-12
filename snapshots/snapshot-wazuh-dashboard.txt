@@ -1,0 +1,6 @@
+Wazuh Dashboard — Agents view
+Active: 1
+Last registered agent: purple-agent
+Most active agent: purple-agent
+Agents coverage: 100%
+checked_at: 2025-09-24T11:53:26Z
